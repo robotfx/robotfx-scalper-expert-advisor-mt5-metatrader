@@ -1,0 +1,298 @@
+<div class="post-body post-content">
+<div class="speech-bubble">
+<img alt="The Scalper expert advisor is a fast and simple scalping EA for MetaTrader 5." border="0" data-original-height="1280" data-original-width="1280" height="100" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZTsFTaR5FxUNs0dpSXkZGb5okmSx7N1uyJOUYplfQ_2QPqM4ZQpRPwWVXiwxO8ZPL9FV01oSx5YnE1dbAi2Mx9ysweJqE8CLHjj2X_7_Z1qAALQeqf3s4eluxr5CLLtuApKbLYFxhNLBF5kh68BqIlynwI7TYkiagFw5OnRzYlf2URg7uageJGRDcnez1/s600-e90-rw/scalper.png" style="display: block; float: left; margin-right: 5px;" title="Scalper MT5 EA" width="100"/>
+A simple and fast <strong>scalping expert advisor</strong> for <strong>Metatrader 5</strong>. Very easy to use, not so many settings and – depending on the <strong>price action</strong> – quite profitable.
+</div>
+<div style="text-align: center;">
+<h3><a href="#" id="Settings" name="Settings" title="Scalper EA Settings">Scalper Settings</a></h3>
+</div>
+<div style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZTsFTaR5FxUNs0dpSXkZGb5okmSx7N1uyJOUYplfQ_2QPqM4ZQpRPwWVXiwxO8ZPL9FV01oSx5YnE1dbAi2Mx9ysweJqE8CLHjj2X_7_Z1qAALQeqf3s4eluxr5CLLtuApKbLYFxhNLBF5kh68BqIlynwI7TYkiagFw5OnRzYlf2URg7uageJGRDcnez1/s905/scalper.png" style="display: block; padding: 1em 0px; text-align: center;"><img alt="A screenshot of the settings for the Scalper Expert Advisor for MT5." border="0" data-original-height="805" data-original-width="905" height="570" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZTsFTaR5FxUNs0dpSXkZGb5okmSx7N1uyJOUYplfQ_2QPqM4ZQpRPwWVXiwxO8ZPL9FV01oSx5YnE1dbAi2Mx9ysweJqE8CLHjj2X_7_Z1qAALQeqf3s4eluxr5CLLtuApKbLYFxhNLBF5kh68BqIlynwI7TYkiagFw5OnRzYlf2URg7uageJGRDcnez1/w640-h570-rw/scalper.png" title="Scalper MT5 EA" width="640"/></a></div>
+<p>Use the <strong>time filter</strong> if you want to trade specific <strong>trading sessions (London, New York etc)</strong>.</p>
+<div style="background-color: #f8f8f8; border: 1px solid rgb(0, 0, 0); padding: 10px 20px 0px;">
+<h4 style="font-weight: normal;">Download Scalper EA free</h4>
+<a href="https://drive.google.com/uc?export=download&amp;id=1Ss3lzhm7qEdvIR5zOerVPXNUge4hqPuQ" id="freedownload" name="freedownload" rel="noopener noreferrer nofollow" target="_blank" title="Free download">
+<div style="-ms-flex-align: center; -webkit-align-items: center; -webkit-box-align: center; align-items: center; background-color: #444444; border-radius: 4px; border: 1px solid rgb(255, 255, 255); color: #f0f0f0; display: flex; font-family: Roboto; font-size: 1.2em; justify-content: center; margin: 0px auto; padding: 14px 20px; text-align: center; width: 80%;"><svg height="24" style="margin-right: 10px;" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 13v5.585l1.828-1.828 1.415 1.415L12 22.414l-4.243-4.242 1.415-1.415L11 18.585V13h2zM12 2a7.001 7.001 0 0 1 6.954 6.194 5.5 5.5 0 0 1-.953 10.784L18 17a6 6 0 0 0-11.996-.225L6 17v1.978a5.5 5.5 0 0 1-.954-10.784A7 7 0 0 1 12 2z" fill="rgba(240,240,240,1)"></path></svg> Download a free version</div>
+</a>
+<em style="color: #4e4e4e; font-family: Roboto; font-size: 0.8em;"><span style="color:gold; size:1.2em; font-style: normal">⚠</span> fully functional but limited to trading on demo accounts</em>
+</div>
+<span id="theprice">94</span>
+<script>
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function () {
+    // --- PART 1: Remove links to nonexistent anchors ---
+    const linkshDiv = document.querySelector('.linksh');
+    if (linkshDiv) {
+        const links = linkshDiv.querySelectorAll('a');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (!targetElement) {
+                    link.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    // --- PART 2: Lazy-load YouTube iframe ---
+    const container = document.querySelector('.youtube-lazy');
+    if (!container) return;
+
+    const videoId = container.getAttribute('data-video-id');
+    const si = container.getAttribute('data-si');
+
+    function createIframe(src = null) {
+        if (container.querySelector("iframe")) return;
+
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("width", "560");
+        iframe.setAttribute("height", "315");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("loading", "lazy");
+        iframe.setAttribute("title", "YouTube video player");
+        iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.setAttribute("name", "youtubeframe");
+        iframe.src = src || `https://www.youtube.com/embed/${videoId}?autoplay=1&si=${encodeURIComponent(si)}`;
+
+        container.innerHTML = "";
+        container.appendChild(iframe);
+    }
+
+    function scrollToIframeCenter() {
+        container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // On thumbnail click
+    container.addEventListener("click", () => {
+        createIframe();
+        scrollToIframeCenter();
+    });
+
+    // On ▶️ link click
+    document.querySelectorAll('a[target="youtubeframe"]').forEach(link => {
+        link.addEventListener("click", (e) => {
+            const iframeExists = container.querySelector("iframe");
+            if (!iframeExists) {
+                e.preventDefault();
+                createIframe(link.href);
+                setTimeout(() => {
+                    window.open(link.href, "youtubeframe");
+                    scrollToIframeCenter();
+                }, 200);
+            } else {
+                scrollToIframeCenter();
+            }
+        });
+    });
+});
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Scalper expert advisor MT5",
+  "url": "https://www.robotfx.org/p/scalper-expert-advisor-mt5.html",
+  "description": "A simple and fast scalping expert advisor  for Metatrader 5 . Very easy to use, not so many settings and &#8211; depending on the price action  &#8211; quite profitable.   Scalper Settings    Use the time filt&#8230;",
+  "operatingSystem": "MetaTrader 4, MetaTrader 5 (Windows, macOS, Linux with Wine/VM)",
+  "applicationCategory": "https://schema.org/FinanceApplication",
+  "applicationSuite": "MetaTrader",
+  
+    
+      "screenshot": {
+        "@type": "ImageObject",
+        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZTsFTaR5FxUNs0dpSXkZGb5okmSx7N1uyJOUYplfQ_2QPqM4ZQpRPwWVXiwxO8ZPL9FV01oSx5YnE1dbAi2Mx9ysweJqE8CLHjj2X_7_Z1qAALQeqf3s4eluxr5CLLtuApKbLYFxhNLBF5kh68BqIlynwI7TYkiagFw5OnRzYlf2URg7uageJGRDcnez1/w1200-h630-p-k-no-nu/scalper.png"
+      },
+    
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "RobotFX Team",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjqDhYXLdZI2Hzi6vkQ2pnPz20A0rNyP3HTYoia8-RUD3170pCSfv77ACpX05KJt2iIgwDcm6N79AqUxzKoAFgIupT-XgEC9rzlwDH4hBMKDACgfLPjg2UaySbCEQUW9mZnMlHq_n0q4WC8juOoEAtodFyQcP_M0J9fxW3c3UUy6z7L9oYzcOgG-anlGA=s128-e365-rw"
+    }
+  },
+  "datePublished": "2025-07-18T09:15:00-07:00",
+  "dateModified": "2025-07-18T09:15:00-07:00",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "https://www.robotfx.org/p/scalper-expert-advisor-mt5.html"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "7"
+  },
+  "review": [
+    
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Anonymous",
+    "reviewBody": "Been running this scalper EA on my MT5 for about a week now<br>works pretty good on low timeframes, I mostly use M1 and M5<br>entries are fast and clean, no lag so far",
+    "author": {
+      "@type": "Person",
+      "name": "Anonymous"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Valéria",
+    "reviewBody": "Installed this on a demo first, now moved to live with small lots, was surprised it handled gold scalping pretty well just needed to adjust the trading hours a bit",
+    "author": {
+      "@type": "Person",
+      "name": "Valéria"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Miguel Silvinus",
+    "reviewBody": "This EA is solid, does what it says. not too many settings to mess with which I actually prefer<br>took me a while to trust it but it&#8217;s been holding up",
+    "author": {
+      "@type": "Person",
+      "name": "Miguel Silvinus"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Vladimir",
+    "reviewBody": "Good for fast trades, no overtrading like some other scalpers I tried, TP and SL are tight but consistent<br>not a holy grail but definitely useful when configured right",
+    "author": {
+      "@type": "Person",
+      "name": "Vladimir"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Anonymous",
+    "reviewBody": "Straightforward EA, doesn&#8217;t repaint or try to get fancy just opens and closes fast scalps, which is what I wanted",
+    "author": {
+      "@type": "Person",
+      "name": "Anonymous"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "Anonymous",
+    "reviewBody": "I try the scalper MT5 but it doesn&#39;t open trade",
+    "author": {
+      "@type": "Person",
+      "name": "Anonymous"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  },
+
+  {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "name": "RobotFX Team",
+    "reviewBody": "Reply: There any many reasons why the Scalper (or any EA) might not open a trade, from internet blackout to no equity or (most probably) just not valid trade signals, according to the EA settings and&#8230;",
+    "author": {
+      "@type": "Person",
+      "name": "RobotFX Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RobotFX"
+    }
+  }
+
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to use Scalper expert advisor MT5",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Functions",
+      "text": "Explore the core functions of the Scalper expert advisor MT5."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Charts",
+      "text": "Check the charts to see Scalper expert advisor MT5 examples and understand how it works."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Settings",
+      "text": "Adjust the Scalper expert advisor MT5 settings according to the instructions and your preferences."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Videos",
+      "text": "Watch tutorial videos for a better understanding of how Scalper expert advisor MT5 works."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "Download the Scalper expert advisor MT5 and copy it in the MetaTrader folder."
+    }
+  ]
+}
+</script>
+</div>
